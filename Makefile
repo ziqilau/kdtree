@@ -15,12 +15,17 @@ LIB = build/libkdtree.a
 
 TEST = build/test_kdtree
 
-.PHONY: clean all proto
+.PHONY: clean all proto test
 
-all: build/build_kdtree build/query_kdtree $(TEST)
+all: build/build_kdtree build/query_kdtree
+
+test: $(TEST)
 
 proto:
 	protoc -I=./src/recordio/ --cpp_out=./src/recordio/ ./src/recordio/kdtree.proto
+
+build/test_kdtree: build/test_kdtree.o $(LIB)
+	$(CXX) $(CFLAGS) -o $@ $^ $(LIBPATH) -lgtest -lpthread
 
 build/%_kdtree: build/%_kdtree.o $(LIB)
 	$(CXX) $(CFLAGS) -o $@ $^ $(LIBPATH)
