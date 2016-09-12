@@ -6,7 +6,8 @@ K-D Tree is widely used for efficiently query the distance among vectors.
 ## Data
 Our K-D Tree exploits a Point class for storing vectors. The users are responsible for 
 implementing their favorite I/O, maintaining their own point data. Currently we only
-support Google protobuf for serialization.
+support Google protobuf for serialization. Please specify the /path/to/libprotobuf.so
+and /path/to/header-of-protobuf in Makefile if needed.
 
 ## Environment Requirment
   * GCC 4.9 or higher
