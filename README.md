@@ -22,7 +22,7 @@ and /path/to/header-of-protobuf in Makefile if needed.
     ```
 
 ## Build
-  * The first time use this libaray, you should first compile the protobuf implementation of kdtree.proto:;
+  * The first time use this libaray, you should first compile the protobuf implementation of kdtree.proto:
 
     ```bash
     make proto;make
