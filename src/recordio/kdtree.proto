@@ -1,0 +1,8 @@
+package KDTreeRec;
+
+message KDNodeRec  {
+  required bool isNode = 1;
+  optional uint64 index = 2;
+  optional double axis = 3;
+  repeated double point = 4;
+}
