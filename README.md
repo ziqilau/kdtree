@@ -20,3 +20,9 @@ support Google protobuf for serialization.
     sudo apt-get install -y libprotobuf-dev; sudo apt-get install -y protobuf-compiler;
     ```
 
+## Build
+  * The first time use this libaray, you should first compile the protobuf implementation of kdtree.proto:;
+
+    ```bash
+    make proto;make
+    ```
